@@ -7,7 +7,7 @@ class TestSeleniumInDockerAndFirefox(unittest.TestCase):
     def setUp(self):
         self.browser = Remote(
             desired_capabilities=DesiredCapabilities.FIREFOX,
-            command_executor="http://172.20.0.2:4444/wd/hub"
+            command_executor="http://selenium-hub:4444/wd/hub"
         )
 
     def tearDown(self):
@@ -22,7 +22,7 @@ class TestSeleniumInDockerAndChrome(unittest.TestCase):
     def setUp(self):
         self.browser = Remote(
             desired_capabilities=DesiredCapabilities.CHROME,
-            command_executor="http://172.20.0.2:4444/wd/hub"
+            command_executor="http://selenium-hub:4444/wd/hub"
         )
 
     def tearDown(self):
